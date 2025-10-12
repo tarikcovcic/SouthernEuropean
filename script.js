@@ -4,8 +4,7 @@ if(yearElement){
   yearElement.textContent = new Date().getFullYear().toString();
 }
 
-<<<<<<< HEAD
-=======
+
 
 function adjustTabletHeroTitle() {
   const width = window.innerWidth;
@@ -41,7 +40,6 @@ window.addEventListener('resize', adjustTabletHeroTitle);
 
 document.addEventListener('DOMContentLoaded', adjustTabletHeroTitle);
 
->>>>>>> f910d81 (Design updates with some minor touchups.)
 const observer = new IntersectionObserver((entries)=>{
   for(const entry of entries){
     if(entry.isIntersecting){
@@ -67,11 +65,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 
 function adjustIconSizeForTablet() {
   const width = window.innerWidth;
-<<<<<<< HEAD
-  const icons = document.querySelectorAll('.card-icon');
-
-  if (width >= 768 && width <= 900) {
-=======
   const height = window.innerHeight;
   const icons = document.querySelectorAll('.card-icon');
   
@@ -86,7 +79,6 @@ function adjustIconSizeForTablet() {
   const isTabletRange = (width >= 768 && width <= 900);
 
   if (isTabletRange || isIPadAir || isIPadPro11 || (isIPadPro129 && width < 1350)) {
->>>>>>> f910d81 (Design updates with some minor touchups.)
     icons.forEach(icon => {
       icon.style.width = '160px';
       icon.style.height = '160px';
@@ -94,11 +86,7 @@ function adjustIconSizeForTablet() {
       icon.style.minHeight = '160px';
       icon.style.maxWidth = '160px';
       icon.style.maxHeight = '160px';
-<<<<<<< HEAD
-      icon.style.top = '-70px'; // Smanjeno da ne overlapuje
-=======
       icon.style.top = '-70px';
->>>>>>> f910d81 (Design updates with some minor touchups.)
       icon.style.transform = 'translateX(-50%)';
       icon.style.left = '50%';
       icon.style.position = 'absolute';
@@ -185,11 +173,6 @@ function adjustIconSizeForTablet() {
       icon.style.position = 'absolute';
     });
   } else {
-<<<<<<< HEAD
-    console.log('DESKTOP MODE - ikone 195px'); // DEBUG
-=======
-    
->>>>>>> f910d81 (Design updates with some minor touchups.)
 
     icons.forEach(icon => {
       icon.style.width = '195px';
@@ -214,8 +197,6 @@ if (document.readyState === 'loading') {
 } else {
   setTimeout(adjustIconSizeForTablet, 100);
 }
-<<<<<<< HEAD
-=======
 
 
 function getLineCount(el){
@@ -557,4 +538,3 @@ function forceIPadProLayout(){
 window.addEventListener('load', forceIPadProLayout);
 window.addEventListener('resize', forceIPadProLayout);
 document.addEventListener('DOMContentLoaded', forceIPadProLayout);
->>>>>>> f910d81 (Design updates with some minor touchups.)
