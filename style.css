@@ -18,6 +18,21 @@
 }
 
 /* Global Reset za eliminaciju bijelih traka */
+
+#hero, #what, #contact { /* bež sekcije */
+  background-color: #e8ded6 !important;
+}
+
+#who, #statement { /* bijele sekcije */
+  background-color: #ffffff !important;
+}
+
+* {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +50,7 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -169,7 +185,7 @@ li {
 
 .btn.outline:hover {
   background: #111;
-  color: #fff;
+  color: #fff;;
 }
 
 /* Grid */
@@ -182,7 +198,7 @@ li {
 
 /* Cards */
 .card {
-  background: var(--card);
+  background: var(--card) !important;
   border: 1px solid var(--border);
   padding: 80px 20px 20px 20px;
   position: relative;
@@ -199,6 +215,7 @@ li {
   transform: translateX(-50%);
   object-fit: contain;
   z-index: 10;
+  background-color: transparent !important;
 }
 
 .card h3 {
@@ -232,18 +249,9 @@ li {
 
 .card ul li {
   position: relative;
-  padding-left: 1.5em;   /* prostor za tačku */
   line-height: 1.4;      /* malo ljepši razmak između redova */
 }
 
-.card ul li::before {
-  content: "•";          /* crna tačka */
-  position: absolute;
-  left: 0;               /* tačno uz lijevu ivicu */
-  top: 0.1em;            /* vertikalno centriraj tačku */
-  font-size: 1.2em;      /* možeš prilagoditi veličinu */
-  color: black;          /* boja tačke */
-}
 
 /* Reveal Animations */
 .reveal {
@@ -465,6 +473,26 @@ li {
 .what .card:first-child {
   margin-top: 80px;
 }
+#what .card ul {
+  list-style: none; /* uklanja standardne bullet tačke */
+  padding-left: 0;
+  margin: 0;
+}
+
+#what .card li {
+  position: relative;
+  padding-left: 1.2em; /* prostor za naš custom bullet */
+  text-indent: 0; /* osigurava da drugi red počinje ispod teksta, ne ispod bullet-a */
+  line-height: 1.4;
+}
+
+/* Dodajemo custom bullet pomoću pseudo-elementa */
+#what .card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 /* ========================================
    8. STATEMENT SECTION
@@ -640,6 +668,7 @@ a[href^="mailto"]:visited {
   .card
   {
     padding: 10vh 20px 5vh 20px;
+    align-items: center;
   }
 
   .contact .title-xl 
@@ -720,6 +749,7 @@ a[href^="mailto"]:visited {
   .what .card {
     padding: 130px 30px 30px 30px;
     margin-top: 120px;
+    align-items: center;
   }
   
   .card-icon {
@@ -730,6 +760,7 @@ a[href^="mailto"]:visited {
   
   .card h3 {
     font-size: 48px;
+    text-align: center;
   }
   
   .card ul,
@@ -961,7 +992,6 @@ a[href^="mailto"]:visited {
   .card ul {
     font-size: clamp(16px, 1.4vw, 26px) !important;
     line-height: 1.6;
-    padding: 0 clamp(10px, 1.5vw, 20px);
     text-align: left;
     flex: 1;
     display: flex;
@@ -982,6 +1012,8 @@ a[href^="mailto"]:visited {
     box-sizing: border-box;
   }
   
+  
+
   /* Statement */
   .statement .title-lg {
     font-size: 76px;

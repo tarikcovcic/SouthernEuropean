@@ -5,7 +5,6 @@ if(yearElement){
 }
 
 
-
 function adjustTabletHeroTitle() {
   const width = window.innerWidth;
   const heroTitle = document.querySelector('.hero-panel h1');
@@ -173,6 +172,7 @@ function adjustIconSizeForTablet() {
       icon.style.position = 'absolute';
     });
   } else {
+    
 
     icons.forEach(icon => {
       icon.style.width = '195px';
